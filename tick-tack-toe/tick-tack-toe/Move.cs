@@ -10,7 +10,7 @@ namespace tick_tack_toe
         public int get_move()
         {
             //подсказка пользователю, куда можно поставить свой ход.
-            Console.WriteLine("Кнопки управления ходами: \n");
+            Console.WriteLine("\nКнопки управления ходами: \n");
             Console.WriteLine("-7-|-8-|-9-");
             Console.WriteLine("-4-|-5-|-6-");
             Console.WriteLine("-1-|-2-|-3-");
