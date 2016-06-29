@@ -12,7 +12,7 @@ namespace tick_tack_toe
 
         void scrclr()
         {
-            for (int i = 0; i < 40; i++)
+            for (int i = 0; i < 35; i++)
             {
                 Console.WriteLine("");
             }
@@ -60,11 +60,16 @@ namespace tick_tack_toe
                 }
                 //проверка победы после каждого нового хода
                 win.wingame(array.board);
-                if ( win.Flag == true)
+                if (win.Flag == true)
                 {
                     break;
                 }
-            }            
+            }
+            //Ничья
+            if (win.Flag != true)
+            {
+                Console.WriteLine("\nНичья, в этой игре победителя нет:");
+            }
             board.print_board(array.board);
             Console.ReadLine();
         }
