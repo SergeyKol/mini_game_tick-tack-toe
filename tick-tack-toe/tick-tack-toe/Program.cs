@@ -15,7 +15,8 @@ namespace tick_tack_toe
             Program array = new Program();
             Move move = new Move();
             Board board = new Board();
-
+            WinGame win = new WinGame();
+ 
             for (int i = 0; i < 9; i++) //цикл количество ходов 9 
             {
                 //текущее состояние игрового поля
@@ -44,6 +45,12 @@ namespace tick_tack_toe
                 else
                 {
                     array.board[indexarray] = 'O';
+                }
+                //проверка победы после каждого нового хода
+                win.wingame(array.board);
+                if ( win.Flag == true)
+                {
+                    break;
                 }
             }            
             board.print_board(array.board);
