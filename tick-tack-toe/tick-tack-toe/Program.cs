@@ -10,15 +10,27 @@ namespace tick_tack_toe
     {
         char[] board = { '-', '-', '-', '-', '-', '-', '-', '-', '-' };
 
+        void scrclr()
+        {
+            for (int i = 0; i < 40; i++)
+            {
+                Console.WriteLine("");
+            }
+        }
+
         static void Main(string[] args)
         {
             Program array = new Program();
             Move move = new Move();
             Board board = new Board();
             WinGame win = new WinGame();
+
  
             for (int i = 0; i < 9; i++) //цикл количество ходов 9 
             {
+                //чистим экран
+                array.scrclr();
+
                 //текущее состояние игрового поля
                 board.print_board(array.board);
                 
